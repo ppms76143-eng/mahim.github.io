@@ -6,17 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 
-/* ---------- LOADING ---------- */
+/* LOADING */
 #loading{
-position:fixed;
-inset:0;
+position:fixed;inset:0;
 background:black;
 display:flex;
 flex-direction:column;
@@ -26,23 +20,19 @@ z-index:9999;
 color:white;
 }
 .loader{
-width:60px;
-height:60px;
+width:60px;height:60px;
 border:6px solid #333;
 border-top:6px solid lime;
 border-radius:50%;
 animation:spin 1s linear infinite;
 margin-bottom:15px;
 }
-@keyframes spin{
-to{transform:rotate(360deg)}
-}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-/* ---------- CODE GATE ---------- */
+/* CODE GATE */
 #gate{
 display:none;
-position:fixed;
-inset:0;
+position:fixed;inset:0;
 background:black;
 color:white;
 align-items:center;
@@ -66,7 +56,6 @@ margin-bottom:10px;
 padding:10px;
 width:200px;
 border:none;
-outline:none;
 border-radius:5px;
 margin-top:10px;
 }
@@ -79,14 +68,13 @@ cursor:pointer;
 border-radius:5px;
 }
 
-/* ---------- MAIN ---------- */
+/* MAIN */
 body{
 background:url("Pitchdo.jpg") no-repeat center/cover;
 min-height:100vh;
 display:none;
 }
 
-/* ---------- BUTTONS ---------- */
 #pcBtn{
 position:fixed;
 top:10px;
@@ -97,12 +85,10 @@ background:black;
 color:white;
 border:2px solid lime;
 cursor:pointer;
-z-index:10;
 }
 
 .music-btn{
 margin-top:60px;
-display:block;
 padding:15px;
 background:linear-gradient(to right,green,red);
 color:white;
@@ -110,15 +96,11 @@ text-align:center;
 cursor:pointer;
 }
 
-/* ---------- LAYOUT ---------- */
-.container{
-display:flex;
-padding:20px;
-}
+/* LAYOUT */
+.container{display:flex;padding:20px}
+.left{width:30%}
+.right{width:70%;padding:20px}
 
-.left{
-width:30%;
-}
 .icon-btn{
 display:flex;
 align-items:center;
@@ -126,37 +108,23 @@ margin:15px 0;
 cursor:pointer;
 }
 .icon-btn img{
-width:45px;
-height:45px;
+width:45px;height:45px;
 border-radius:50%;
 margin-right:10px;
 }
-.icon-btn span{
-color:black;
-text-shadow:0 0 8px lime;
-}
+.icon-btn span{color:black;text-shadow:0 0 8px lime}
 
-.right{
-width:70%;
-padding:20px;
-}
-.right h2{color:green}
-.right p{margin:6px 0;color:red}
-
-/* ---------- RATING ---------- */
+/* RATING */
 .stars span{
 font-size:30px;
 cursor:pointer;
 color:gray;
 }
-.stars span.active{
-color:gold;
-}
+.stars span.active{color:gold}
 
-/* ---------- FUN ---------- */
+/* FUN */
 #funScreen{
-position:fixed;
-inset:0;
+position:fixed;inset:0;
 background:black;
 color:white;
 display:none;
@@ -170,13 +138,11 @@ z-index:9997;
 
 <body>
 
-<!-- LOADING -->
 <div id="loading">
 <div class="loader"></div>
 <p>Loading Mahim's World...</p>
 </div>
 
-<!-- CODE GATE -->
 <div id="gate">
 <div id="codeBox">
 <div id="randomCode"></div>
@@ -188,50 +154,23 @@ z-index:9997;
 </div>
 </div>
 
-<button id="pcBtn" onclick="alert('Turn on Desktop mode from browser settings')">
-PC MODE
-</button>
+<button id="pcBtn" onclick="alert('Enable Desktop Mode')">PC MODE</button>
 
 <div class="music-btn" onclick="playMusic()">Click For Peace Music</div>
 <audio id="music" src="Chubina_v2.mp3"></audio>
 
 <div class="container">
-
 <div class="left">
 <div class="icon-btn" onclick="openLink('https://www.youtube.com/@mx-okamiz57')">
 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
-<span>Subscribe My Youtube</span>
-</div>
-
-<div class="icon-btn" onclick="openLink('https://t.me/EditingCourt')">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
-<span>Join For PfP</span>
-</div>
-
-<div class="icon-btn" onclick="openLink('https://discord.com/users/mahimaxt')">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png">
-<span>Visit My Discord</span>
-</div>
-
-<div class="icon-btn" onclick="openLink('https://www.instagram.com/your_avery36')">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-<span>Instagram</span>
-</div>
-
-<div class="icon-btn" onclick="openLink('mailto:shakil397576@gmail.com')">
-<img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
-<span>Email Me</span>
+<span>YouTube</span>
 </div>
 </div>
 
 <div class="right">
-<h2>Hello I Am Mahim - SSC 2027</h2>
-<p>Clan: Kazi (Muslim)</p>
-<p>Dream: Businessman</p>
-<p>From: Tangail, BD</p>
-<p>Birthday: 22 Dec 2008</p>
+<h2>Hello I Am Mahim</h2>
+<p>SSC 2027 Batch</p>
 
-<br>
 <button onclick="showFun()">See Fun</button>
 
 <h3>Rate My Bio</h3>
@@ -244,20 +183,16 @@ PC MODE
 </div>
 <p id="rateText">0 vote | Average 0</p>
 </div>
-
 </div>
 
-<div id="funScreen">Its Just For Fun 😄</div>
+<div id="funScreen">Its Just For Fun</div>
 
-<!-- ---------- JAVASCRIPT ---------- -->
 <script>
-/* loading */
 setTimeout(()=>{
 document.getElementById("loading").style.display="none";
 document.getElementById("gate").style.display="flex";
-},3000);
+},2000);
 
-/* random code */
 let code=Math.random().toString(36).substring(2,6).toUpperCase();
 document.getElementById("randomCode").innerText=code;
 
@@ -271,28 +206,23 @@ document.getElementById("msg").innerText="Wrong Code!";
 }
 }
 
-/* music */
 function playMusic(){
 document.getElementById("music").play();
 }
 
-/* links */
 function openLink(u){
 window.open(u,"_blank");
 }
 
-/* fun */
 function showFun(){
 let f=document.getElementById("funScreen");
 f.style.display="flex";
-setTimeout(()=>f.style.display="none",4000);
+setTimeout(()=>f.style.display="none",5000);
 }
 
-/* rating */
 let total=0,votes=0;
 function rate(n){
-votes++;
-total+=n;
+votes++; total+=n;
 document.querySelectorAll(".stars span").forEach((s,i)=>{
 s.classList.toggle("active",i<n);
 });
